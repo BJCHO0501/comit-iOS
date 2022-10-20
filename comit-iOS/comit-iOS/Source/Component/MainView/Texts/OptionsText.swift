@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct OptionsText: View {
-    let passCountry: Country
-    let catchCountry: Country
+    @Binding var passCountry: Country
+    @Binding var catchCountry: Country
     @Binding var exchangRate: String
     @Binding var exChangeTime: String
     @Binding var pay: String
@@ -21,16 +21,20 @@ struct OptionsText: View {
                     .font(.system(size: 18))
                 
                 Spacer()
-                Text(passCountry.KRName() + "(\(passCountry.unit()))")
-                    .font(.system(size: 18))
+                CountryPicker(
+                    selectCountry: $passCountry,
+                    ignoreCountry: catchCountry
+                )
             }
             HStack {
                 Text("수취국가")
                     .font(.system(size: 18))
                 
                 Spacer()
-                Text(catchCountry.KRName() + "(\(catchCountry.unit()))")
-                    .font(.system(size: 18))
+                CountryPicker(
+                    selectCountry: $catchCountry,
+                    ignoreCountry: passCountry
+                )
             }
             HStack {
                 Text("환율")
@@ -58,7 +62,7 @@ struct OptionsText: View {
                         Rectangle()
                             .stroke(style: .init(lineWidth: 1))
                     )
-                Text("USD")
+                Text(passCountry.unit())
                     .font(.system(size: 18))
             }
         }
@@ -68,8 +72,8 @@ struct OptionsText: View {
 struct OptionsText_Previews: PreviewProvider {
     static var previews: some View {
         OptionsText(
-            passCountry: Country.KR,
-            catchCountry: Country.JP,
+            passCountry: .constant(Country.KR),
+            catchCountry: .constant(Country.JP),
             exchangRate: .constant("12314"),
             exChangeTime: .constant("2020/1/54 : 234"),
             pay: .constant("")
