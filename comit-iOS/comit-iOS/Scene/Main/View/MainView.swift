@@ -10,11 +10,19 @@ import SwiftUI
 struct MainView: View {
     @StateObject var exchangeVM = ExchangeViewModel()
     
-    @State var passMoney: String = ""
+    @State private var passMoney: String = ""
     
     var body: some View {
         GeometryReader { proxy in
-            let _ = exchangeVM.printLog()
+            NavigationLink(
+                destination: PresentView(
+                    exchangeRate: $exchangeVM.exchangeCalculatValue,
+                    catchCountry: $exchangeVM.catchCountry
+                ),
+                isActive: $exchangeVM.isSucced
+            ) {
+                EmptyView()
+            }
             VStack {
                 ScrollView(showsIndicators: false) {
                     VStack {
@@ -29,18 +37,30 @@ struct MainView: View {
                             catchCountry: $exchangeVM.catchCountry,
                             exchangRate: $exchangeVM.exchangeRate,
                             exChangeTime: $exchangeVM.exchangeTime,
-                            pay: $passMoney
+                            pay: $passMoney,
+                            error: $exchangeVM.isError,
+                            errorMessage: $exchangeVM.errorMessage
                         )
                         .padding(.horizontal, 16)
                         
                         Spacer()
                     }
                 }
+                
                 EnterButton(
-                    action: {},
+                    action: {
+                        exchangeVM.money = passMoney
+                        exchangeVM.exchangeMoney()
+                    },
                     title: "환률 계산"
                 )
             }
+        }
+        .onChange(of: exchangeVM.passCountry) { _ in
+            exchangeVM.getExchange()
+        }
+        .onChange(of: exchangeVM.catchCountry) { _ in
+            exchangeVM.getExchange()
         }
     }
 }
