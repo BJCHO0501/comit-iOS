@@ -10,10 +10,14 @@ import SwiftUI
 struct OptionsText: View {
     @Binding var passCountry: Country
     @Binding var catchCountry: Country
-    @Binding var exchangRate: String
+    @Binding var exchangRate: Double
     @Binding var exChangeTime: String
     @Binding var pay: String
     
+    @Binding var error: Bool
+    @Binding var errorMessage: String
+    
+    let numberFormetter = NumberFormatter()
     var body: some View {
         VStack(spacing: 16) {
             HStack {
@@ -23,7 +27,7 @@ struct OptionsText: View {
                 Spacer()
                 CountryPicker(
                     selectCountry: $passCountry,
-                    ignoreCountry: catchCountry
+                    ignoreCountry: $catchCountry
                 )
             }
             HStack {
@@ -33,7 +37,7 @@ struct OptionsText: View {
                 Spacer()
                 CountryPicker(
                     selectCountry: $catchCountry,
-                    ignoreCountry: passCountry
+                    ignoreCountry: $passCountry
                 )
             }
             HStack {
@@ -41,7 +45,7 @@ struct OptionsText: View {
                     .font(.system(size: 18))
                 
                 Spacer()
-                Text(exchangRate)
+                Text(exchangRate.numberFormat() + " \(catchCountry.unit()) / \(passCountry.unit())")
                     .font(.system(size: 18))
             }
             HStack {
@@ -53,17 +57,13 @@ struct OptionsText: View {
                     .font(.system(size: 18))
             }
             HStack {
-                Text("송금액")
-                    .font(.system(size: 18))
-                Spacer()
-                TextField("", text: $pay)
-                    .frame(width: 150)
-                    .overlay(
-                        Rectangle()
-                            .stroke(style: .init(lineWidth: 1))
-                    )
-                Text(passCountry.unit())
-                    .font(.system(size: 18))
+                InputTextField(
+                    placehorder: "송금액",
+                    text: $pay,
+                    error: $error,
+                    errorMessage: $errorMessage,
+                    unit: $passCountry
+                )
             }
         }
     }
@@ -74,9 +74,11 @@ struct OptionsText_Previews: PreviewProvider {
         OptionsText(
             passCountry: .constant(Country.KR),
             catchCountry: .constant(Country.JP),
-            exchangRate: .constant("12314"),
+            exchangRate: .constant(124.341),
             exChangeTime: .constant("2020/1/54 : 234"),
-            pay: .constant("")
+            pay: .constant(""),
+            error: .constant(false),
+            errorMessage: .constant("에러입니다")
         )
     }
 }

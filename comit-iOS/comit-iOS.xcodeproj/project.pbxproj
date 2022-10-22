@@ -17,6 +17,17 @@
 		4B4C6C7029011F2F007433C2 /* CountryEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4C6C6F29011F2F007433C2 /* CountryEnum.swift */; };
 		4B4C6C7729012988007433C2 /* CountryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4C6C7629012988007433C2 /* CountryPicker.swift */; };
 		4B5232062901583C00F176BC /* ExchangeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5232052901583C00F176BC /* ExchangeViewModel.swift */; };
+		4B52320B29017F8400F176BC /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B52320A29017F8400F176BC /* Header.swift */; };
+		4B52320E29017F9700F176BC /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B52320D29017F9700F176BC /* Api.swift */; };
+		4B5232112901808900F176BC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4B5232102901808900F176BC /* Alamofire */; };
+		4B5232142901811000F176BC /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5232132901811000F176BC /* HttpClient.swift */; };
+		4B52321629018D2C00F176BC /* ExchangeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B52321529018D2C00F176BC /* ExchangeModel.swift */; };
+		4B52321C290212A200F176BC /* PresentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B52321B290212A200F176BC /* PresentView.swift */; };
+		4B523220290212CF00F176BC /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B52321F290212CF00F176BC /* BackButton.swift */; };
+		4B5232262902854900F176BC /* Double+numberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5232252902854900F176BC /* Double+numberFormatter.swift */; };
+		4B5232282902870500F176BC /* Date+formatTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5232272902870500F176BC /* Date+formatTime.swift */; };
+		4B52322A2902B26500F176BC /* ExchangeTextForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5232292902B26500F176BC /* ExchangeTextForm.swift */; };
+		4B52324129035CF600F176BC /* InputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B52324029035CF600F176BC /* InputTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +42,16 @@
 		4B4C6C6F29011F2F007433C2 /* CountryEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryEnum.swift; sourceTree = "<group>"; };
 		4B4C6C7629012988007433C2 /* CountryPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPicker.swift; sourceTree = "<group>"; };
 		4B5232052901583C00F176BC /* ExchangeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeViewModel.swift; sourceTree = "<group>"; };
+		4B52320A29017F8400F176BC /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		4B52320D29017F9700F176BC /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		4B5232132901811000F176BC /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		4B52321529018D2C00F176BC /* ExchangeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeModel.swift; sourceTree = "<group>"; };
+		4B52321B290212A200F176BC /* PresentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentView.swift; sourceTree = "<group>"; };
+		4B52321F290212CF00F176BC /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		4B5232252902854900F176BC /* Double+numberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+numberFormatter.swift"; sourceTree = "<group>"; };
+		4B5232272902870500F176BC /* Date+formatTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+formatTime.swift"; sourceTree = "<group>"; };
+		4B5232292902B26500F176BC /* ExchangeTextForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeTextForm.swift; sourceTree = "<group>"; };
+		4B52324029035CF600F176BC /* InputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B5232112901808900F176BC /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +105,7 @@
 		4B4C6C5E29010454007433C2 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				4B5232232902850700F176BC /* Extenstion */,
 				4B4C6C6E29011F0C007433C2 /* Enum */,
 				4B4C6C6229010567007433C2 /* Component */,
 			);
@@ -101,8 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				4B4C6C68290117CF007433C2 /* Color */,
-				4B4C6C5429010437007433C2 /* Assets.xcassets */,
 				4B4C6C5629010437007433C2 /* Preview Content */,
+				4B4C6C5429010437007433C2 /* Assets.xcassets */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -110,6 +133,7 @@
 		4B4C6C612901052C007433C2 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				4B5232172902126600F176BC /* Present */,
 				4B523200290157FB00F176BC /* Main */,
 			);
 			path = Scene;
@@ -118,6 +142,7 @@
 		4B4C6C6229010567007433C2 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				4B52321D290212B100F176BC /* PresentView */,
 				4B5232072901607500F176BC /* MainView */,
 			);
 			path = Component;
@@ -192,6 +217,7 @@
 		4B5232032901580800F176BC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4B52321529018D2C00F176BC /* ExchangeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -199,6 +225,7 @@
 		4B5232072901607500F176BC /* MainView */ = {
 			isa = PBXGroup;
 			children = (
+				4B52323F29035CB800F176BC /* TextField */,
 				4B4C6C752901294C007433C2 /* Picker */,
 				4B4C6C7229012856007433C2 /* Texts */,
 				4B4C6C7129012851007433C2 /* Button */,
@@ -209,8 +236,109 @@
 		4B5232082901665400F176BC /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				4B5232122901810400F176BC /* HttpClient */,
+				4B52320C29017F8800F176BC /* Api */,
+				4B52320929017F7600F176BC /* Header */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		4B52320929017F7600F176BC /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				4B52320A29017F8400F176BC /* Header.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		4B52320C29017F8800F176BC /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				4B52320D29017F9700F176BC /* Api.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		4B5232122901810400F176BC /* HttpClient */ = {
+			isa = PBXGroup;
+			children = (
+				4B5232132901811000F176BC /* HttpClient.swift */,
+			);
+			path = HttpClient;
+			sourceTree = "<group>";
+		};
+		4B5232172902126600F176BC /* Present */ = {
+			isa = PBXGroup;
+			children = (
+				4B52321A2902129000F176BC /* Model */,
+				4B5232192902128A00F176BC /* ViewModel */,
+				4B5232182902128600F176BC /* View */,
+			);
+			path = Present;
+			sourceTree = "<group>";
+		};
+		4B5232182902128600F176BC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B52321B290212A200F176BC /* PresentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4B5232192902128A00F176BC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4B52321A2902129000F176BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4B52321D290212B100F176BC /* PresentView */ = {
+			isa = PBXGroup;
+			children = (
+				4B52322B2902B49300F176BC /* TextForm */,
+				4B52321E290212C100F176BC /* BackButton */,
+			);
+			path = PresentView;
+			sourceTree = "<group>";
+		};
+		4B52321E290212C100F176BC /* BackButton */ = {
+			isa = PBXGroup;
+			children = (
+				4B52321F290212CF00F176BC /* BackButton.swift */,
+			);
+			path = BackButton;
+			sourceTree = "<group>";
+		};
+		4B5232232902850700F176BC /* Extenstion */ = {
+			isa = PBXGroup;
+			children = (
+				4B5232252902854900F176BC /* Double+numberFormatter.swift */,
+				4B5232272902870500F176BC /* Date+formatTime.swift */,
+			);
+			path = Extenstion;
+			sourceTree = "<group>";
+		};
+		4B52322B2902B49300F176BC /* TextForm */ = {
+			isa = PBXGroup;
+			children = (
+				4B5232292902B26500F176BC /* ExchangeTextForm.swift */,
+			);
+			path = TextForm;
+			sourceTree = "<group>";
+		};
+		4B52323F29035CB800F176BC /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				4B52324029035CF600F176BC /* InputTextField.swift */,
+			);
+			path = TextField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +357,9 @@
 			dependencies = (
 			);
 			name = "comit-iOS";
+			packageProductDependencies = (
+				4B5232102901808900F176BC /* Alamofire */,
+			);
 			productName = "comit-iOS";
 			productReference = 4B4C6C4D29010433007433C2 /* comit-iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -257,6 +388,9 @@
 				Base,
 			);
 			mainGroup = 4B4C6C4429010433007433C2;
+			packageReferences = (
+				4B52320F2901808900F176BC /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 4B4C6C4E29010433007433C2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -283,13 +417,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B52321C290212A200F176BC /* PresentView.swift in Sources */,
 				4B5232062901583C00F176BC /* ExchangeViewModel.swift in Sources */,
+				4B52320B29017F8400F176BC /* Header.swift in Sources */,
 				4B4C6C6529010609007433C2 /* MainView.swift in Sources */,
 				4B4C6C67290116BB007433C2 /* EnterButton.swift in Sources */,
+				4B5232282902870500F176BC /* Date+formatTime.swift in Sources */,
+				4B5232142901811000F176BC /* HttpClient.swift in Sources */,
+				4B52322A2902B26500F176BC /* ExchangeTextForm.swift in Sources */,
 				4B4C6C6A290117D9007433C2 /* Color.swift in Sources */,
+				4B52321629018D2C00F176BC /* ExchangeModel.swift in Sources */,
 				4B4C6C7029011F2F007433C2 /* CountryEnum.swift in Sources */,
+				4B5232262902854900F176BC /* Double+numberFormatter.swift in Sources */,
 				4B4C6C5129010433007433C2 /* comit_iOSApp.swift in Sources */,
 				4B4C6C7729012988007433C2 /* CountryPicker.swift in Sources */,
+				4B52320E29017F9700F176BC /* Api.swift in Sources */,
+				4B523220290212CF00F176BC /* BackButton.swift in Sources */,
+				4B52324129035CF600F176BC /* InputTextField.swift in Sources */,
 				4B4C6C6C29011D00007433C2 /* OptionsText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,6 +635,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4B52320F2901808900F176BC /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4B5232102901808900F176BC /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B52320F2901808900F176BC /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4B4C6C4529010433007433C2 /* Project object */;
 }
